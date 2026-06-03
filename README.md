@@ -1,0 +1,32 @@
+# Brute Force Password Cracker
+
+A C# application that creates a random SHA256-hashed password and then
+recovers it using a brute force attack. It compares single-threaded and
+multi-threaded performance. The GUI is built with Avalonia (cross-platform C#).
+
+## Planned Features
+- Password generation
+- SHA256 hashing with a static salt
+- Single-threaded brute force
+- Multi-threaded brute force
+- Progress display
+- Elapsed time display
+- Found password display
+- Performance comparison (single vs multi)
+
+## Classes
+- PasswordHasher
+- PasswordGenerator
+- BruteForceGenerator
+- PasswordValidator
+- BruteForceEngine
+- PerformanceLogger
+- MainWindow (GUI)
+
+## Development History
+### Version 1
+- Created the project
+- Added .gitignore
+- Created the class structure
+- Created the UML diagram
+- Wrote the README
