@@ -35,3 +35,9 @@ multi-threaded performance. The GUI is built with Avalonia (cross-platform C#).
 - Implemented PasswordHasher class
 - Added SHA256 hashing with a static salt
 - Updated UML to show HashPassword method
+
+### Version 3
+- Implemented PasswordGenerator class
+- Generates a random 4-5 character lowercase password
+- Hashes the generated password using PasswordHasher
+- Updated the UML diagram
