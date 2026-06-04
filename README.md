@@ -30,3 +30,8 @@ multi-threaded performance. The GUI is built with Avalonia (cross-platform C#).
 - Created the class structure
 - Created the UML diagram
 - Wrote the README
+
+### Version 2
+- Implemented PasswordHasher class
+- Added SHA256 hashing with a static salt
+- Updated UML to show HashPassword method
