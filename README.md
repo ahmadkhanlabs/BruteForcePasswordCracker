@@ -47,3 +47,9 @@ multi-threaded performance. The GUI is built with Avalonia (cross-platform C#).
 - Generates all possible character combinations of a given length
 - Uses the same lowercase charset as the password generator
 - Updated the UML diagram
+
+### Version 5
+- Implemented the PasswordValidator class
+- Hashes a guess and compares it to the target hash
+- Returns true if the guess matches, false otherwise
+- Updated the UML diagram
