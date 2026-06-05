@@ -41,3 +41,9 @@ multi-threaded performance. The GUI is built with Avalonia (cross-platform C#).
 - Generates a random 4-5 character lowercase password
 - Hashes the generated password using PasswordHasher
 - Updated the UML diagram
+
+### Version 4
+- Implemented the BruteForceGenerator class
+- Generates all possible character combinations of a given length
+- Uses the same lowercase charset as the password generator
+- Updated the UML diagram
