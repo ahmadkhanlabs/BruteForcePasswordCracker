@@ -53,3 +53,10 @@ multi-threaded performance. The GUI is built with Avalonia (cross-platform C#).
 - Hashes a guess and compares it to the target hash
 - Returns true if the guess matches, false otherwise
 - Updated the UML diagram
+
+### Version 6
+- Implemented the single-threaded BruteForceEngine
+- Searches from length 1 up to a maximum of 6
+- Uses BruteForceGenerator for guesses and PasswordValidator to check them
+- Stops as soon as the password is found
+- Updated the UML diagram
