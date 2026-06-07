@@ -67,3 +67,9 @@ multi-threaded performance. The GUI is built with Avalonia (cross-platform C#).
 - Uses a CancellationToken so all threads stop immediately when one finds the password
 - Multi-threaded search is significantly faster for longer passwords
 - Updated the UML diagram
+
+### Version 8
+- Implemented the PerformanceLogger class
+- Records single-threaded and multi-threaded crack times
+- Calculates and reports the speedup factor
+- Updated the UML diagram
