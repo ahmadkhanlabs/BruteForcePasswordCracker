@@ -60,3 +60,10 @@ multi-threaded performance. The GUI is built with Avalonia (cross-platform C#).
 - Uses BruteForceGenerator for guesses and PasswordValidator to check them
 - Stops as soon as the password is found
 - Updated the UML diagram
+
+### Version 7
+- Added multi-threaded brute force using (CPU cores - 1) threads
+- Splits each length's guesses across threads by first letter
+- Uses a CancellationToken so all threads stop immediately when one finds the password
+- Multi-threaded search is significantly faster for longer passwords
+- Updated the UML diagram
