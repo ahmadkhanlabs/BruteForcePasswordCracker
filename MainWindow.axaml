@@ -1,9 +1,29 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="BruteForcePasswordCracker.MainWindow"
-        Title="BruteForcePasswordCracker">
-    Welcome to Avalonia!
+        Width="500" Height="480"
+        Title="Password Brute Force Cracker">
+    <StackPanel Margin="20" Spacing="10">
+        <TextBlock Text="Password Brute Force Cracker"
+                   FontSize="20" FontWeight="Bold"/>
+
+        <Button x:Name="CreateButton" Content="Create Password" Click="OnCreatePassword"/>
+        <TextBlock x:Name="PasswordText" Text="Password: (none yet)"/>
+
+        <Button x:Name="StartButton" Content="Start Brute Force" Click="OnStart"/>
+
+        <StackPanel Orientation="Horizontal" Spacing="10">
+            <Button x:Name="StopButton" Content="Stop" Click="OnStop"/>
+            <Button x:Name="ClearButton" Content="Clear" Click="OnClear"/>
+        </StackPanel>
+
+        <TextBlock x:Name="StatusText" Text="Status: idle"/>
+        <TextBlock x:Name="TimeText" Text="Elapsed: 0 ms"/>
+
+        <TextBlock Text="Result:"/>
+        <TextBox x:Name="ResultText" AcceptsReturn="True" Height="160" IsReadOnly="True"/>
+
+        <TextBlock Text="Made by Ahmad Khan" FontStyle="Italic"
+                   HorizontalAlignment="Center"/>
+    </StackPanel>
 </Window>
