@@ -73,3 +73,53 @@ multi-threaded performance. The GUI is built with Avalonia (cross-platform C#).
 - Records single-threaded and multi-threaded crack times
 - Calculates and reports the speedup factor
 - Updated the UML diagram
+
+### Version 9
+- Built the Avalonia GUI (MainWindow)
+- Create Password, Start, Stop, and Clear buttons
+- Displays status, elapsed time, and the result with performance comparison
+- Brute force runs on a background task so the UI stays responsive
+- Completed the UML diagram with all classes
+
+## About the Project
+
+This application is a password reset brute force simulator built in C# using the Avalonia UI framework. It generates a random password, hashes it with SHA256 and a constant salt, and then attempts to crack the hash using a brute force attack — first single-threaded, then multi-threaded — and compares the performance of the two approaches.
+
+## How It Works
+
+1. A random password of 4–5 lowercase characters is generated and hashed.
+2. The brute force engine tries every possible combination starting from length 1 up to a maximum of 6, without knowing the real password length.
+3. Each guess is hashed and compared against the target hash.
+4. The single-threaded version checks guesses one at a time.
+5. The multi-threaded version splits the work across (CPU cores − 1) threads running in parallel, and stops all threads immediately once the password is found.
+6. The performance of both methods is measured and compared.
+
+## How To Use The App
+
+1. Run the application.
+2. Click **Create Password** to generate a new random hashed password.
+3. Click **Start Brute Force** to begin cracking. The single-threaded and multi-threaded attacks run on a background thread so the interface stays responsive.
+4. The result box shows the found password and a performance comparison (single vs multi-threaded time and the speedup factor).
+5. Click **Clear** to reset the app and try again.
+
+## Classes Overview
+
+- **PasswordHasher** — hashes a string using SHA256 with a constant salt.
+- **PasswordGenerator** — creates a random 4–5 character password and hashes it.
+- **BruteForceGenerator** — produces all possible character combinations of a given length.
+- **PasswordValidator** — hashes a guess and compares it to the target hash.
+- **BruteForceEngine** — coordinates the attack, both single-threaded and multi-threaded.
+- **PerformanceLogger** — records and reports the single vs multi-threaded timing.
+- **MainWindow** — the graphical user interface.
+
+## Technologies Used
+
+- C# (.NET)
+- Avalonia UI (cross-platform GUI framework)
+- SHA256 hashing
+- Multi-threading with Tasks and CancellationToken
+
+## Author
+
+Ahmad Khan
+Vilnius University — Object Oriented Programming
