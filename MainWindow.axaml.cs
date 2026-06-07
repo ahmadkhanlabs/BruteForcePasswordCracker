@@ -40,6 +40,8 @@ namespace BruteForcePasswordCracker
             }
 
             StatusText.Text = "Status: cracking...";
+            Progress.IsIndeterminate = true;
+             Progress.Value = 100;
             stopToken = new CancellationTokenSource();
 
             string hashToCrack = targetHash;
@@ -59,6 +61,7 @@ namespace BruteForcePasswordCracker
                 Dispatcher.UIThread.Post(() =>
                 {
                     StatusText.Text = "Status: done";
+                    Progress.IsIndeterminate = false;
                     TimeText.Text = $"Elapsed: single {watch1.ElapsedMilliseconds} ms, multi {watch2.ElapsedMilliseconds} ms";
                     ResultText.Text = "Found password: " + multi + "\n\n" + logger.GetReport();
                 });
@@ -79,6 +82,8 @@ namespace BruteForcePasswordCracker
             targetHash = "";
             PasswordText.Text = "Password: (none yet)";
             StatusText.Text = "Status: idle";
+            Progress.IsIndeterminate = false;
+             Progress.Value = 0;
             TimeText.Text = "Elapsed: 0 ms";
             ResultText.Text = "";
         }

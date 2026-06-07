@@ -1,7 +1,7 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="BruteForcePasswordCracker.MainWindow"
-        Width="500" Height="480"
+        Width="500" Height="500"
         Title="Password Brute Force Cracker">
     <StackPanel Margin="20" Spacing="10">
         <TextBlock Text="Password Brute Force Cracker"
@@ -18,6 +18,7 @@
         </StackPanel>
 
         <TextBlock x:Name="StatusText" Text="Status: idle"/>
+        <ProgressBar x:Name="Progress" IsIndeterminate="False" Height="10"/>
         <TextBlock x:Name="TimeText" Text="Elapsed: 0 ms"/>
 
         <TextBlock Text="Result:"/>
